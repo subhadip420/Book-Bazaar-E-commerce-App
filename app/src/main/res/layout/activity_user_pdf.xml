@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_setting"
+    tools:context=".User_Pdf_Activity">
+
+    <!-- Top app bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_top_pdf_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0097A7">
+
+            <!-- Search bar image -->
+            <ImageView
+                android:id="@+id/pdf_search_bar_image"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/search_bar_image" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Buttons for navigating between Book Bazaar and PDFs -->
+    <LinearLayout
+        android:id="@+id/home_pdf_btn_lin_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp">
+
+        <!-- Button for Book Bazaar -->
+        <Button
+            android:id="@+id/pdf_to_bookBazaar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Book Bazaar"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#A5A5A8"
+            app:cornerRadius="10dp"
+            app:textAllCaps="false" />
+
+        <!-- Button for PDFs -->
+        <Button
+            android:id="@+id/pdf_home_pdf_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" Books PDF "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#3131FD"
+            app:cornerRadius="10dp"
+            app:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView to display PDFs -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <ScrollView
+            android:id="@+id/user_order_item_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- RecyclerView for PDFs -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pdfRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

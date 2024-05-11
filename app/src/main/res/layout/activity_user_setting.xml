@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_setting"
+    tools:context=".User_Setting_Activity">
+
+    <!-- Top app bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/user_setting_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_top_setting_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0097A7">
+
+            <!-- Buttons -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Cancel button -->
+                <TextView
+                    android:id="@+id/user_settings_close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:padding="2dp"
+                    android:text="Cancel"
+                    android:textColor="#FBF9FB"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Update button -->
+                <TextView
+                    android:id="@+id/user_settings_update_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:padding="2dp"
+                    android:text="Update"
+                    android:textColor="#FBF9FB"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Profile image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_settings_profile_image"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/user_setting_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/profile3">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <!-- Change photo button -->
+    <TextView
+        android:id="@+id/user_profile_image_change_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_settings_profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#EAEAE9"
+        android:padding="2dp"
+        android:text="Change Photo"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Phone number -->
+    <TextView
+        android:id="@+id/textView_User_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_profile_image_change_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="Phone Number"
+        android:textColor="#026D78"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Full name input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_setting_name_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_User_phone"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Your Name"
+        android:textColorHint="#020A97"
+        app:boxBackgroundColor="#7CEDEDE9"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="#0097A7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_setting_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="31"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Address input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_address_name_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_setting_name_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="Your Address"
+        android:textColorHint="#020A97"
+        app:boxBackgroundColor="#7CEDEDE9"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="#0097A7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_setting_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="31"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Update message -->
+    <TextView
+        android:id="@+id/textView_Udate_plswait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_address_name_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:text="You can Update your Photo, Name and Address"
+        android:textColor="#E64A19"
+        android:textSize="15sp" />
+
+    <!-- Set security questions button -->
+    <Button
+        android:id="@+id/security_question_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_Udate_plswait"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:text="Set Security Questions"
+        android:textColor="@color/teal_700"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F5F6F8"
+        app:cornerRadius="20dp"
+        app:textAllCaps="false" />
+
+    <!-- Reset security questions message -->
+    <TextView
+        android:id="@+id/textView_reset_security_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/security_question_btn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:text="For Reset Password please set Security Questions"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</RelativeLayout>

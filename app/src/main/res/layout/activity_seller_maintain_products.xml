@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_product_details"
+    tools:context=".SellerMaintainProductsActivity">
+
+    <!-- Title for the activity -->
+    <TextView
+        android:id="@+id/text_seller_maintain_book"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Edit or Delete Books"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- ScrollView for scrolling through content -->
+    <ScrollView
+        android:id="@+id/seller_maintain_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_seller_maintain_book"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- CardView for displaying product image -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/product_image_details_card"
+                android:layout_width="300dp"
+                android:layout_height="450dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="20dp">
+
+                <!-- ImageView for displaying product image -->
+                <ImageView
+                    android:id="@+id/seller_book_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/upload_seller_book" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Text View for Book State -->
+            <TextView
+                android:id="@+id/textView_seller_BookState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_image_details_card"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="Book State"
+                android:textColor="#EF1A07"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- Text View for Book Id -->
+            <TextView
+                android:id="@+id/textView_seller_BookId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_BookState"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="Book Id"
+                android:textColor="#512DA8"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Text Input Layout for Book Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_seller_BookName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_BookId"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Name"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seller_book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="51"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Text Input Layout for Author Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_seller_BookAuthorName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_BookName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Author Name"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seller_book_author_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="51"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Text Input Layout for Book Category -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_seller_Book_Category"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_BookAuthorName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:textColorHint="#000000"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#1E9393"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <AutoCompleteTextView
+                    android:id="@+id/seller_maintain_book_category_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none">
+
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Text Input Layout for Book Description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_seller_BookDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_Book_Category"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Description"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seller_book_description_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="101"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Text Input Layout for Book Price -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_seller_BookPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_BookDescription"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Price"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seller_book_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Button for Applying Changes -->
+            <Button
+                android:id="@+id/seller_apply_change_book_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_BookPrice"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Apply Changes"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#1976D2"
+                app:cornerRadius="20dp"
+                app:textAllCaps="false" />
+
+            <!-- Button for Marking Book Out of Stock -->
+            <Button
+                android:id="@+id/seller_out_of_stock_book_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_apply_change_book_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:text="Out of Stock"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#F1724B"
+                app:cornerRadius="20dp"
+                app:textAllCaps="false" />
+
+            <!-- Button for Deleting Book -->
+            <Button
+                android:id="@+id/seller_delete_book_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_out_of_stock_book_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="20dp"
+                android:text="Delete Book"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#D32F2F"
+                app:cornerRadius="20dp"
+                app:textAllCaps="false" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

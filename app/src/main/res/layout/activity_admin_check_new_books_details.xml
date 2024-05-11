@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCheckNewBooksDetailsActivity">
+
+    <!-- AppBarLayout and Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/user_bookDetails_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_top_bookDetails_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#315DA8">
+
+            <!-- TextView inside the toolbar -->
+            <TextView
+                android:id="@+id/text_book_all_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Book and Seller Details"
+                android:textColor="#F2F3F8"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- RelativeLayout for main content -->
+    <RelativeLayout
+        android:id="@+id/user_bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_bookDetails_toolbar">
+
+        <!-- ScrollView to scroll through the content -->
+        <ScrollView
+            android:id="@+id/product_image_details_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FDFEFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- RelativeLayout to contain the content -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- CardView to display product image -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/product_image_details_card"
+                    android:layout_width="300dp"
+                    android:layout_height="450dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="20dp">
+
+                    <!-- ImageView for the product image -->
+                    <ImageView
+                        android:id="@+id/seller_book_image_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/upload_seller_book" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- TextView displaying "Book Details" -->
+                <TextView
+                    android:id="@+id/textView_book_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_image_details_card"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Book Details"
+                    android:textColor="#040404"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView displaying the state of the seller's book -->
+                <TextView
+                    android:id="@+id/seller_book_state_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_book_details"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Seller book state"
+                    android:textColor="#E60A0A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView displaying the ID of the book -->
+                <TextView
+                    android:id="@+id/seller_BookId_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_book_state_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Book Id"
+                    android:textColor="#315DA8"
+                    android:textSize="14sp" />
+
+                <!-- TextView displaying the name of the book -->
+                <TextView
+                    android:id="@+id/seller_BookName_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_BookId_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Book Name"
+                    android:textColor="#315DA8"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView displaying the name of the book's author -->
+                <TextView
+                    android:id="@+id/seller_authorName_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_BookName_details"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Author Name"
+                    android:textColor="#315DA8"
+                    android:textSize="15sp" />
+
+                <!-- TextView displaying the currency symbol for the book price -->
+                <TextView
+                    android:id="@+id/seller_bookPrice_symbol"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_authorName_details"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="₹"
+                    android:textColor="#315DA8"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView displaying the price of the book -->
+                <TextView
+                    android:id="@+id/seller_bookPrice_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_authorName_details"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/seller_bookPrice_symbol"
+                    android:text="Book Price"
+                    android:textColor="#315DA8"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <!-- TextView displaying the category of the book -->
+                <TextView
+                    android:id="@+id/seller_bookCategory_details"
+                    android:layout_width="321dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_bookPrice_details"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Book Category"
+                    android:textColor="#193A9F"
+                    android:textSize="14sp" />
+
+                <!-- TextView displaying the description of the book -->
+                <TextView
+                    android:id="@+id/seller_bookDescription_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_bookCategory_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Book Description"
+                    android:textColor="#315DA8"
+                    android:textSize="15sp" />
+
+                <!-- TextView displaying "Seller Details" -->
+                <TextView
+                    android:id="@+id/textView_seller_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_bookDescription_details"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Seller Details"
+                    android:textColor="#040404"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView displaying the date and time when the seller uploaded the book -->
+                <TextView
+                    android:id="@+id/seller_book_upload_time_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_seller_details"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Seller book upload date time"
+                    android:textColor="#315DA8"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView displaying the ID of the seller -->
+                <TextView
+                    android:id="@+id/seller_id_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_book_upload_time_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Seller id"
+                    android:textColor="#040404"
+                    android:textSize="16sp" />
+
+                <!-- TextView displaying the name of the seller -->
+                <TextView
+                    android:id="@+id/seller_name_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_id_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Seller name"
+                    android:textColor="#040404"
+                    android:textSize="16sp" />
+
+                <!-- TextView displaying the phone number of the seller -->
+                <TextView
+                    android:id="@+id/seller_phone_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_name_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Seller phone"
+                    android:textColor="#040404"
+                    android:textSize="16sp" />
+
+                <!-- TextView displaying the email address of the seller -->
+                <TextView
+                    android:id="@+id/seller_email_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_phone_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Seller email"
+                    android:textColor="#040404"
+                    android:textSize="16sp" />
+
+                <!-- TextView displaying the address of the seller -->
+                <TextView
+                    android:id="@+id/seller_address_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_email_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Seller address"
+                    android:textColor="#040404"
+                    android:textSize="16sp" />
+
+                <!-- TextView displaying "Contact to Seller" -->
+                <TextView
+                    android:id="@+id/textView_seller_contact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_address_details"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Contact to Seller"
+                    android:textColor="#040404"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Buttons layout for contacting the seller -->
+                <LinearLayout
+                    android:id="@+id/seller_contact_btn_lin_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_seller_contact2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <Button
+                        android:id="@+id/seller_email_link_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_left_round"
+                        android:text="   Email  "
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#47B6EA"
+                        app:textAllCaps="false" />
+
+                    <Button
+
+                        android:id="@+id/seller_call_link_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_normal"
+                        android:text="  Call "
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/grey1"
+                        app:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/seller_whatsapp_link_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_right_round"
+                        android:text="Whatsapp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#38C13E"
+                        app:textAllCaps="false" />
+
+                </LinearLayout>
+
+                <!-- Buttons for approving the book -->
+                <Button
+                    android:id="@+id/admin_approve_book_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seller_contact_btn_lin_lay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Approve Book"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#315DA8"
+                    app:cornerRadius="20dp"
+                    app:textAllCaps="false" />
+
+                <!-- Buttons for rejecting the book -->
+                <Button
+                    android:id="@+id/admin_reject_book_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/admin_approve_book_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Reject Book"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#D32F2F"
+                    app:cornerRadius="20dp"
+                    app:textAllCaps="false" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

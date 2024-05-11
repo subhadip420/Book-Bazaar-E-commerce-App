@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCheckNewBooksActivity"
+    android:background="#7B1FA2">
+
+    <!-- AppBarLayout and Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/admin_check_new_books_toolbar"
+            android:background="#0394BF"
+            >
+
+            <!-- TextView inside the toolbar -->
+            <TextView
+                android:id="@+id/textView_admin_check_new_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Check New Books"
+                android:textColor="#F2F3F8"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- RelativeLayout for main content -->
+    <RelativeLayout
+        android:id="@+id/admin_order_item_rel_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_setting"> <!-- Background color as a gradient -->
+
+        <!-- ScrollView to scroll through the content -->
+        <ScrollView
+            android:id="@+id/admin_order_item_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- RelativeLayout to contain the RecyclerView -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- RecyclerView to display new books -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/admin_check_new_book_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

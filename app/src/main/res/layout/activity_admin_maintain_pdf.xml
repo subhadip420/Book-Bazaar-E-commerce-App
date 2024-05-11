@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminMaintainPdfActivity">
+
+    <!-- TextView for displaying "Edit or Delete PDF" -->
+    <TextView
+        android:id="@+id/textView_admin_upload_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#1E9393"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Edit or Delete PDF"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- ScrollView for scrolling content -->
+    <ScrollView
+        android:id="@+id/admin_add_pdf_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView_admin_upload_pdf">
+
+        <!-- RelativeLayout for arranging UI components -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_setting">
+
+            <!-- ImageView for displaying an image related to uploading PDF -->
+            <ImageView
+                android:id="@+id/upload_pdf_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/upload_pdf" />
+
+            <!-- TextView for displaying "PDF id" -->
+            <TextView
+                android:id="@+id/textViewPdfId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upload_pdf_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="PDF id"
+                android:textColor="#3449CF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- TextInputLayout for entering updated PDF book name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pdf_book_name_layout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewPdfId"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Name"
+                android:textColorHint="#1E9393"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#1E9393"
+                app:boxBackgroundColor="#94EDEDE9"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#1E9393"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <!-- TextInputEditText for entering updated PDF book name -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/updated_pdf_book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="51"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout for entering updated PDF book author name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pdf_book_author_name_layout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdf_book_name_layout1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:hint="Author Name"
+                android:textColorHint="#1E9393"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#1E9393"
+                app:boxBackgroundColor="#94EDEDE9"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#1E9393"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <!-- TextInputEditText for entering updated PDF book author name -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/updated_pdf_book_author_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="31"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout for selecting updated PDF book category -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/admin_pdf_cat_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdf_book_author_name_layout1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:textColorHint="#1E9393"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#1E9393"
+                app:boxBackgroundColor="#94EDEDE9"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <!-- AutoCompleteTextView for selecting updated PDF book category -->
+                <AutoCompleteTextView
+                    android:id="@+id/updated_pdf_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout for entering updated PDF book description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pdf_book_description_layout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/admin_pdf_cat_layout"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Description"
+                android:textColorHint="#1E9393"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#1E9393"
+                app:boxBackgroundColor="#94EDEDE9"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#1E9393"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <!-- TextInputEditText for entering updated PDF book description -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/updated_pdf_book_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="101"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextView for displaying "Update Date and Time" -->
+            <TextView
+                android:id="@+id/textViewPdfDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pdf_book_description_layout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="Update Date and Time"
+                android:textColor="#D32F2F"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Button for updating PDF -->
+            <Button
+                android:id="@+id/admin_update_pdf_btn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewPdfDateTime"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Update PDF"
+                android:textColor="#1E9393"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="20dp"
+                app:textAllCaps="false" />
+
+            <!-- Button for deleting PDF -->
+            <Button
+                android:id="@+id/admin_delete_pdf_btn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/admin_update_pdf_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:text="Delete PDF"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#D32F2F"
+                app:cornerRadius="20dp"
+                app:textAllCaps="false" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

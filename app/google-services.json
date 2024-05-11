@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "723809226307",
+    "firebase_url": "https://bookbazaarapp-default-rtdb.firebaseio.com",
+    "project_id": "bookbazaarapp",
+    "storage_bucket": "bookbazaarapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723809226307:android:6c467d757a51ac51594ef6",
+        "android_client_info": {
+          "package_name": "com.example.bookbazaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALnF1nwGNiFOvpeMbvhmr5MQbF0n0Zecc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

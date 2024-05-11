@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFFFF">
+
+    <!-- Linear layout for buttons -->
+    <LinearLayout
+        android:id="@+id/home_pdf_btn_lin_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp">
+
+        <!-- Button for Book Bazaar -->
+        <Button
+            android:id="@+id/home_book_bazaar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Book Bazaar"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#0E2FFF"
+            app:cornerRadius="10dp"
+            app:textAllCaps="false" />
+
+        <!-- Button for Books PDF -->
+        <Button
+            android:id="@+id/home_to_pdf_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" Books PDF "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#CDCDD1"
+            app:cornerRadius="10dp"
+            app:textAllCaps="false" />
+    </LinearLayout>
+
+    <!-- ScrollView for the content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/home_pdf_btn_lin_lay"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ViewPager for slider categories -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/user_home_categories_slider"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="0dp"
+                android:paddingStart="05dp"
+                android:paddingEnd="05dp" />
+
+            <!-- TextView for recently added books -->
+            <TextView
+                android:id="@+id/textView_recently_added"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_home_categories_slider"
+                android:layout_marginLeft="00dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="00dp"
+                android:background="#E7E8E7"
+                android:padding="8dp"
+                android:text="Recently Added Books >>"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- RecyclerView for recently added books -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_recycler_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView_recently_added"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp" />
+
+            <!-- TextView for all books -->
+            <TextView
+                android:id="@+id/textView_all_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_recycler_menu"
+                android:layout_marginLeft="00dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="00dp"
+                android:background="#E7E8E7"
+                android:padding="8dp"
+                android:text="All Books "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- RecyclerView for all books -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView_all_books"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="5dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

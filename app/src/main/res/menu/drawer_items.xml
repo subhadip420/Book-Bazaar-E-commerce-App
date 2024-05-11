@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Group of items with single selection behavior -->
+    <group android:checkableBehavior="single">
+        <!-- Home item -->
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <!-- Categories item -->
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_category"
+            android:title="Categories" />
+        <!-- Books PDF item -->
+        <item
+            android:id="@+id/nav_pdf"
+            android:icon="@drawable/ic_pdf"
+            android:title="Books PDF" />
+
+    </group>
+
+    <!-- My Information section -->
+    <item android:title="My Information">
+        <menu>
+            <group android:checkableBehavior="single">
+                <!-- Wishlist item -->
+                <item
+                    android:id="@+id/nav_user_wishlist"
+                    android:icon="@drawable/ic_favorite"
+                    android:title="Wishlist" />
+                <!-- Cart item -->
+                <item
+                    android:id="@+id/nav_user_cart"
+                    android:icon="@drawable/ic_cart"
+                    android:title="Cart" />
+                <!-- My Orders item -->
+                <item
+                    android:id="@+id/nav_user_order"
+                    android:icon="@drawable/ic_shop"
+                    android:title="My Orders" />
+                <!-- Account Settings item -->
+                <item
+                    android:id="@+id/nav_user_account"
+                    android:icon="@drawable/ic_account"
+                    android:title="Account Settings" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- Communications section -->
+    <item android:title="Communications">
+        <menu>
+            <group android:checkableBehavior="single">
+                <!-- Customer Service item -->
+                <item
+                    android:id="@+id/nav_user_custocare"
+                    android:icon="@drawable/ic_message"
+                    android:title="Customer Service" />
+                <!-- Terms and Conditions item -->
+                <item
+                    android:id="@+id/nav_user_termcon"
+                    android:icon="@drawable/ic_rule"
+                    android:title="Terms and Conditions" />
+                <!-- Sell on Book Bazaar item -->
+                <item
+                    android:id="@+id/nav_user_sell"
+                    android:icon="@drawable/ic_add_business"
+                    android:title="Sell on Book Bazaar" />
+                <!-- Share item -->
+                <item
+                    android:id="@+id/nav_user_share"
+                    android:icon="@drawable/ic_share"
+                    android:title="Share" />
+
+            </group>
+        </menu>
+    </item>
+
+    <!-- Logout from Book Bazaar section -->
+    <item android:title="Logout from Book Bazaar">
+        <menu>
+            <group android:checkableBehavior="single">
+                <!-- Logout item -->
+                <item
+                    android:id="@+id/nav_user_logout"
+                    android:icon="@drawable/ic_new_logout"
+                    android:title="Logout" />
+            </group>
+        </menu>
+    </item>
+</menu>

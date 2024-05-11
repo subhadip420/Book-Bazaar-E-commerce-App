@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cart_item_details_card"
+    android:layout_width="match_parent"
+    android:layout_height="90sp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="20dp">
+
+    <!-- Container for the content inside the card -->
+    <RelativeLayout
+        android:id="@+id/cart_list_book_details_rel_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3ECE8F6">  <!-- Set background color for the container -->
+
+        <!-- TextView for displaying book name -->
+        <TextView
+            android:id="@+id/cart_list_book_name_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:text="Book Name "
+            android:textColor="#111212"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- TextView for displaying author name -->
+        <TextView
+            android:id="@+id/cart_list_book_author_name_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart_list_book_name_details"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="0dp"
+            android:text="Author Name "
+            android:textColor="#01080E"
+            android:textSize="15sp" />
+
+        <!-- TextView for displaying currency symbol -->
+        <TextView
+            android:id="@+id/cart_list_book_price_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="6dp"
+            android:text="₹ "
+            android:textColor="#005E5E"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- TextView for displaying book price -->
+        <TextView
+            android:id="@+id/cart_list_book_price_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:text="Book Price "
+            android:textColor="#005E5E"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- TextView for displaying quantity -->
+        <TextView
+            android:id="@+id/cart_list_book_quantity_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Quantity"
+            android:textColor="#FF1010"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

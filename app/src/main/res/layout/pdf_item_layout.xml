@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:id="@+id/linear_layout10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp">
+
+        <!-- ImageView for displaying the book image -->
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="110dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pdf_view" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout20"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:orientation="vertical"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp">
+
+            <!-- TextView for displaying the PDF book name -->
+            <TextView
+                android:id="@+id/pdf_book_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Book Name"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- TextView for displaying the PDF book author name -->
+            <TextView
+                android:id="@+id/pdf_book_author_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Author Name"
+                android:textColor="@color/purple_700"
+                android:textSize="14sp" />
+
+            <!-- TextView for displaying the PDF book category -->
+            <TextView
+                android:id="@+id/pdf_book_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Category"
+                android:textColor="#03063A"
+                android:textSize="14sp" />
+
+            <!-- TextView for displaying the PDF book description -->
+            <TextView
+                android:id="@+id/pdf_book_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Book Description"
+                android:textColor="#878888"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

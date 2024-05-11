@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Login_Activity"
+    android:background="@drawable/bg_blue_seven"
+    >
+
+    <!-- TextView for displaying "Admin Login" -->
+    <TextView
+        android:id="@+id/text_view_id5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Admin Login"
+        android:textColor="#FEFEFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!-- ImageView for displaying an image related to admin login -->
+    <ImageView
+        android:id="@+id/admin_login_image"
+        android:layout_width="228dp"
+        android:layout_height="218dp"
+        android:layout_below="@+id/text_view_id5"
+        android:layout_marginTop="110dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vec_admin_login" />
+
+    <!-- TextInputLayout for phone number input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/admin_login_phoneno_input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/admin_login_image"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Phone"
+        android:textColorHint="#082280"
+        app:helperText="Required*"
+        app:counterEnabled="true"
+        app:counterTextColor="@color/black"
+        app:counterMaxLength="10"
+        app:endIconMode="clear_text"
+        app:endIconTint="#082280"
+        app:prefixText="+91"
+        app:prefixTextColor="@color/black"
+        app:helperTextTextColor="#FA0000"
+        app:boxStrokeColor="#001073"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:startIconDrawable="@drawable/ic_phone">
+
+        <!-- TextInputEditText for entering phone number -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/admin_login_phoneno_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for password input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/admin_signin_password_input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/admin_login_phoneno_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:hint="Password"
+        android:textColorHint="#082280"
+        app:helperText="Required*"
+        app:counterEnabled="true"
+        app:counterTextColor="@color/black"
+        app:counterMaxLength="10"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#082280"
+        app:helperTextTextColor="#FA0000"
+        app:boxStrokeColor="#000395"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <!-- TextInputEditText for entering password -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/admin_login_passsword_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button for initiating admin login -->
+    <Button
+        android:id="@+id/admin_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/admin_signin_password_input1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:insetLeft="12dp"
+        android:insetRight="12dp"
+        android:text="@string/admin_login_btn"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#032C7E"
+        app:cornerRadius="20dp"
+        app:iconPadding="10dp"
+        app:textAllCaps="false"
+        tools:ignore="TextContrastCheck" />
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_green_six"
+    tools:context=".Seller_Login_Activity">
+
+    <!-- TextView for the title "Seller Login" -->
+    <TextView
+        android:id="@+id/text_view_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="80dp"
+        android:text="Seller Login"
+        android:textColor="#0097A7"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- LottieAnimationView for displaying a login animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/seller_login_anim"
+        android:layout_width="261dp"
+        android:layout_height="219dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/seller_login_anim" />
+
+    <!-- TextInputLayout and TextInputEditText for capturing seller email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/seller_login_email_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_login_anim"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="Seller Email"
+        android:textColorHint="#0097A7"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_mail"
+        app:startIconTint="#0097A7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/seller_login_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLength="51"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- TextInputLayout and TextInputEditText for capturing seller password -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/seller_login_password_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_login_email_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:hint="Password"
+        android:textColorHint="#0097A7"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:counterTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="#0097A7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/seller_login_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button for initiating the login process -->
+    <Button
+        android:id="@+id/seller_login_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_login_password_input1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:insetLeft="12dp"
+        android:insetRight="12dp"
+        android:text="Login Now"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#0097A7"
+        app:cornerRadius="20dp"
+        app:iconPadding="10dp"
+        app:textAllCaps="false"
+        tools:ignore="TextContrastCheck" />
+
+</RelativeLayout>

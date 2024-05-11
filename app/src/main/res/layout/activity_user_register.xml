@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_purple_four"
+    tools:context=".UserRegisterActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/text_view_id3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Signup"
+        android:textColor="#88138C"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- Lottie AnimationView for signup -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/user_signup_anim"
+        android:layout_width="248dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/user_signup" />
+
+    <!-- TextInputLayout for entering name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signin_name_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_signup_anim"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:hint="Name"
+        android:textColorHint="#020A97"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#020A97"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#020A97"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="#020A97">
+
+        <!-- EditText for entering name -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signin_username_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="21"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for entering phone number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signin_phoneno_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin_name_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:hint="Phone"
+        android:textColorHint="#020A97"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#020A97"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#020A97"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:prefixText="+91"
+        app:prefixTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="#020A97">
+
+        <!-- EditText for entering phone number -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signin_phoneno_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for entering password -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin_phoneno_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:hint="Password"
+        android:textColorHint="#020A97"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#020A97"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:counterTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#020A97"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="#020A97">
+
+        <!-- EditText for entering password -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signin_passsword_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button for user registration -->
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password_input1"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:insetLeft="12dp"
+        android:insetRight="5dp"
+        android:text="Signup"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#88138C"
+        app:cornerRadius="20dp"
+        app:iconPadding="10dp"
+        app:textAllCaps="false"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- TextView for becoming a seller -->
+    <TextView
+        android:id="@+id/seller_reg_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:text="Want to become a Seller ?"
+        android:textColor="#050505"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:textAllCaps="false" />
+
+</RelativeLayout>

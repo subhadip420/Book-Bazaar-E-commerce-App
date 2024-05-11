@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue_two"
+    tools:context=".UserLoginActivity">
+
+    <!-- Lottie animation for login -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="248dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/user_login_anim" />
+
+    <!-- Title "Login" -->
+    <TextView
+        android:id="@+id/text_view_id4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:text="Login"
+        android:textColor="#0468FF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- Phone number input field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_phoneno_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_id4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="30dp"
+        android:hint="Phone"
+        android:textColorHint="#030DBD"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#020A97"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#020A97"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:prefixText="+91"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="#020A97">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_phoneno_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password input field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_phoneno_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:hint="Password"
+        android:textColorHint="#030DBD"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#020A97"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:counterTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#020A97"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="#020A97">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_passsword_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Remember me checkbox and forget password link -->
+    <LinearLayout
+        android:id="@+id/linear_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password_input1"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:paddingLeft="1dp"
+        android:paddingTop="1dp">
+
+        <com.rey.material.widget.CheckBox
+            android:id="@+id/remember_me_checkbox"
+            style="@style/Material.Drawable.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:text="@string/rem_me"
+            android:textColor="@color/purple_700"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/forget_password_link"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:text="@string/forget_pass"
+            android:textColor="@color/purple_700"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Login button -->
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:text="Login Now"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#0156D6"
+        app:cornerRadius="20dp"
+        app:iconPadding="10dp"
+        app:textAllCaps="false"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Admin and Seller links -->
+    <TextView
+        android:id="@+id/admin_link"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="16dp"
+        android:padding="0dp"
+        android:text="@string/admin"
+        android:textColor="@color/purple_700"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/seller_link"
+        android:layout_width="146dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:padding="0dp"
+        android:text="I am a Seller"
+        android:textColor="@color/purple_700"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:textAllCaps="false" />
+
+</RelativeLayout>

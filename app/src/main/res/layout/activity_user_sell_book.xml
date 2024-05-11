@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".User_Sell_Book_Activity">
+
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_top_sellOnBookBazaar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0097A7">
+
+            <!-- Text for the Toolbar -->
+            <TextView
+                android:id="@+id/textView_user_sell_on_book_bazaar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sell on Book Bazaar"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable layout for the main content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <!-- Scroll view for the content -->
+        <ScrollView
+            android:id="@+id/seller_user_order_item_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Inner layout for the content -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Lottie AnimationView for becoming a seller -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/user_become_seller"
+                    android:layout_width="336dp"
+                    android:layout_height="235dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/earn_money_anim" />
+
+                <!-- Text describing the process -->
+                <TextView
+                    android:id="@+id/textView_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_become_seller"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Welcome to our e-commerce platform tailored for book enthusiasts! Whether you're an avid reader looking to declutter your shelves or a budding seller eager to share your literary treasures, our app provides the perfect marketplace for buying and selling new or pre-loved books.
+With seamless login options for sellers, you can easily create an account and start listing your books in no time. Whether it's a rare first edition, a beloved classic, or the latest bestseller, our platform welcomes all genres and types of books.
+Join our community of book lovers and sellers today to discover a world of literary treasures waiting to find new homes. Happy reading and selling!"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <!-- Step-by-step guide -->
+                <TextView
+                    android:id="@+id/textView_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_01"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="If you want to became a Seller follow the steps"
+                    android:textColor="#0824AF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Step 1 -->
+                <TextView
+                    android:id="@+id/textView_001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Step1:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Description for step 1 -->
+                <TextView
+                    android:id="@+id/textView_s1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_001"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Click on 'Logout' for logout from user account."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <!-- Image for step 1 -->
+                <ImageView
+                    android:id="@+id/step1_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s1" />
+
+                <!-- Repeat similar structure for other steps -->
+                <!-- Repeat similar structure for other steps -->
+                <!-- Repeat similar structure for other steps -->
+
+                <TextView
+                    android:id="@+id/textView_002"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step1_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step2:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_002"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Click 'Yes' for Logout."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step2_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s2" />
+
+
+                <TextView
+                    android:id="@+id/textView_003"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step2_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step3:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_003"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Then Click 'Want to become a Seller' for create a seller account."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step3_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s3" />
+
+
+                <TextView
+                    android:id="@+id/textView_004"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step3_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step4:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_004"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Fill all your business details as mentions in the form."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step4_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s4" />
+
+
+                <TextView
+                    android:id="@+id/textView_005"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step4_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step5:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_005"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Then check all details and Click 'Register Now' for Create new Account."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step5_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s5" />
+
+
+                <TextView
+                    android:id="@+id/textView_006"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step5_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step6:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_006"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="If you have already a seller account click on 'Already Have an Account'."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step6_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s6" />
+
+
+                <TextView
+                    android:id="@+id/textView_007"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step6_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step7:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_007"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Enter your Email and Password that you use for registration and click 'Login Now'."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step7_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s7" />
+
+
+                <TextView
+                    android:id="@+id/textView_08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step7_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step8:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_08"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="If you want to sell book then Click on 'Add Items'."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step8_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s8" />
+
+
+                <TextView
+                    android:id="@+id/textView_009"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step8_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step9:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_009"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Then select a the Book Category."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step9_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s9"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s9" />
+
+
+                <TextView
+                    android:id="@+id/textView_0010"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step9_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step10:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_0010"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Then click on 'Upload Image' to upload book image."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step10_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s10"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s10" />
+
+
+                <TextView
+                    android:id="@+id/textView_0011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step10_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step11:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_0011"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Then fill all the details of the book correctly as mention."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step11_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s11"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s11" />
+
+
+                <TextView
+                    android:id="@+id/textView_0012"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step11_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step12:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_0012"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Then Click on 'Add Book' to add the book on Book Bazaar."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step12_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s12"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s12" />
+
+
+                <TextView
+                    android:id="@+id/textView_0013"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step12_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step13:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_0013"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="In the Dashboard you can see all books and it's State that you have uploaded."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step13_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s13"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s13" />
+
+
+                <TextView
+                    android:id="@+id/textView_0014"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step13_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step14:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_0014"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="If you want to see your seller profile Click on 'Profile'."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step14_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s14"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s14" />
+
+
+                <TextView
+                    android:id="@+id/textView_0015"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step14_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step15:-"
+                    android:textColor="#00020B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_s15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_0015"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Here you can see your email and password that you have use to login, and you can Logout from seller account by Clicking on 'Logout'."
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/step15_image"
+                    android:layout_width="340dp"
+                    android:layout_height="800dp"
+                    android:layout_below="@+id/textView_s15"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s15" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

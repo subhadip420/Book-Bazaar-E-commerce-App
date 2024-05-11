@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminHomeActivity">
+
+    <!-- TextView for displaying welcome message -->
+    <TextView
+        android:id="@+id/textView_welcome_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="#0394BF"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Welcome Dear Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- ScrollView for scrolling through content -->
+    <ScrollView
+        android:id="@+id/admin_home_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView_welcome_admin">
+
+        <!-- RelativeLayout for organizing content -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Linear layout containing the first item -->
+            <LinearLayout
+                android:id="@+id/linear_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp">
+
+                <!-- LottieAnimationView for animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/maintain_book_anim" />
+
+                <!-- Button for maintaining books -->
+                <Button
+                    android:id="@+id/admin_maintain_book_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Maintain Books"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#7B1FA2"
+                    app:cornerRadius="5dp"
+                    app:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <!-- Linear layout containing the second item -->
+            <LinearLayout
+                android:id="@+id/linear_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_layout1"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp">
+
+                <!-- LottieAnimationView for animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/approve_book_anim" />
+
+                <!-- Button for approving new books -->
+                <Button
+                    android:id="@+id/admin_check_new_book_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Approve New Books"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#0447CD"
+                    app:cornerRadius="5dp"
+                    app:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <!-- Linear layout containing the third item -->
+            <LinearLayout
+                android:id="@+id/linear_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_layout2"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp">
+
+                <!-- LottieAnimationView for animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/seller_anim4" />
+
+                <!-- Button for checking customer orders -->
+                <Button
+                    android:id="@+id/admin_check_new_order_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Check Customer Order"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#46ADBF"
+                    app:cornerRadius="5dp"
+                    app:textAllCaps="false" />
+            </LinearLayout>
+
+            <!-- Linear layout containing the fourth item -->
+            <LinearLayout
+                android:id="@+id/linear_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_layout3"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp">
+
+                <!-- LottieAnimationView for animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/upload_pdf_anim" />
+
+                <!-- Button for maintaining or adding PDF -->
+                <Button
+                    android:id="@+id/admin_add_new_pdf_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Maintain or add PDF"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#0EAA98"
+                    app:cornerRadius="5dp"
+                    app:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <!-- Button for logout admin -->
+            <Button
+                android:id="@+id/admin_logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_layout4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:text="Logout"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#F11010"
+                app:cornerRadius="10dp"
+                app:textAllCaps="false" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

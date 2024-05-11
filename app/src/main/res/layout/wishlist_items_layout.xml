@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wishlist_item_details_card"
+    android:layout_width="match_parent"
+    android:layout_height="90sp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:background="#FAECEC"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="20dp">
+
+    <!-- RelativeLayout to contain the details -->
+    <RelativeLayout
+        android:id="@+id/wishlist_book_details_rel_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88DBFDFB">
+
+        <!-- TextView to display the name of the book -->
+        <TextView
+            android:id="@+id/wishlist_book_name_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:text="Book Name "
+            android:textColor="#111212"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- TextView to display the author name of the book -->
+        <TextView
+            android:id="@+id/wishlist_book_author_name_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wishlist_book_name_details"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="0dp"
+            android:text="Author Name "
+            android:textColor="#01080E"
+            android:textSize="15sp" />
+
+        <!-- TextView to display the price of the book -->
+        <TextView
+            android:id="@+id/wishlist_book_price_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="6dp"
+            android:text="Book Price "
+            android:textColor="#005E5E"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

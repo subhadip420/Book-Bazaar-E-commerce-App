@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProductDetailActivity">
+
+    <!-- App bar layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/user_bookDetails_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar for displaying book details title -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_top_bookDetails_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#315DA8">
+
+            <TextView
+                android:id="@+id/text_book_all_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Book Details"
+                android:textColor="#F2F3F8"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Layout for bottom navigation bar -->
+    <RelativeLayout
+        android:id="@+id/user_bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_bookDetails_toolbar"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <!-- ScrollView for scrolling content -->
+        <ScrollView
+            android:id="@+id/product_image_details_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FDFEFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Layout for displaying book details -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- CardView for displaying book image -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/product_image_details_card"
+                    android:layout_width="300dp"
+                    android:layout_height="450dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="20dp">
+
+                    <ImageView
+                        android:id="@+id/product_image_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/upload_seller_book" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- TextViews for displaying book details -->
+                <TextView
+                    android:id="@+id/product_BookName_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_image_details_card"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Book Name"
+                    android:textColor="#315DA8"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView for displaying author name -->
+                <TextView
+                    android:id="@+id/product_authorName_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_BookName_details"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Author Name"
+                    android:textColor="#315DA8"
+                    android:textSize="16sp" />
+
+                <!-- ImageView for adding book to wishlist -->
+                <ImageView
+                    android:id="@+id/product_addTo_wishlist_btn"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_below="@+id/product_authorName_details"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/ic_favorite_red_empty" />
+
+                <!-- TextView for displaying book price -->
+                <TextView
+                    android:id="@+id/product_bookPrice_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_authorName_details"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/product_bookPrice_symbol"
+                    android:text="Book Price"
+                    android:textColor="#315DA8"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView for displaying currency symbol -->
+                <TextView
+                    android:id="@+id/product_bookPrice_symbol"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_authorName_details"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="₹"
+                    android:textColor="#315DA8"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView for displaying book category -->
+                <TextView
+                    android:id="@+id/product_bookCategory_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_bookPrice_symbol"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Book Category"
+                    android:textColor="#315DA8"
+                    android:textSize="15sp" />
+
+                <!-- TextView for displaying book description -->
+                <TextView
+                    android:id="@+id/product_bookDescription_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_bookCategory_details"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Book Description"
+                    android:textColor="#040404"
+                    android:textSize="15sp" />
+
+                <!-- Layout for displaying free delivery -->
+                <LinearLayout
+                    android:id="@+id/free_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_bookDescription_details"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- ImageView for free delivery icon -->
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="18dp"
+                        android:src="@drawable/product_free_delivery" />
+
+                    <!-- TextView for displaying free delivery message -->
+                    <TextView
+                        android:id="@+id/view_product_free_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_bookCategory_details"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Free Delivery | with in 3 days"
+                        android:textColor="#040404"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Layout for displaying terms and conditions -->
+                <LinearLayout
+                    android:id="@+id/book_term_and_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/free_delivery"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Layout for displaying return policy -->
+                    <LinearLayout
+                        android:id="@+id/book_replacement"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <!-- ImageView for return policy icon -->
+                        <ImageView
+                            android:id="@+id/image_replacement"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/product_replacement" />
+
+                        <!-- TextView for displaying return policy message -->
+                        <TextView
+                            android:id="@+id/view_product_replacement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="7 Days Return Policy"
+                            android:textColor="#040404"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Layout for displaying cash on delivery -->
+                    <LinearLayout
+                        android:id="@+id/book_cash"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp">
+
+                        <!-- ImageView for cash on delivery icon -->
+                        <ImageView
+                            android:id="@+id/image_cash"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/product_cash_on_delivery" />
+
+                        <!-- TextView for displaying cash on delivery message -->
+                        <TextView
+                            android:id="@+id/view_product_cash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="Cash on Delivery available"
+                            android:textColor="#040404"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Layout for displaying offers and coupons -->
+                    <LinearLayout
+                        android:id="@+id/book_offer"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <!-- ImageView for offers and coupons icon -->
+                        <ImageView
+                            android:id="@+id/image_offer"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/product_offers" />
+
+                        <!-- TextView for displaying offers and coupons message -->
+                        <TextView
+                            android:id="@+id/view_product_offer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="Offers and Coupons"
+                            android:textColor="#040404"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <!-- ElegantNumberButton for selecting quantity -->
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/product_elegantNumberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="1dp"
+        app:backGroundColor="#FFFFFF"
+        app:finalNumber="10"
+        app:initialNumber="1"
+        app:textColor="@color/black"
+        app:textSize="9sp">
+
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+    <!-- Button for adding book to cart -->
+    <Button
+        android:id="@+id/product_addToCart_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:text="Add to Cart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#3A5BAE"
+        app:cornerRadius="5dp"
+        app:textAllCaps="false" />
+
+</RelativeLayout>

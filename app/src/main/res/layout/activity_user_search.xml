@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_setting"
+    tools:context=".User_Search_Activity">
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/user_search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_top_search_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#027895">
+
+            <!-- Search EditText -->
+            <com.rey.material.widget.EditText
+                android:id="@+id/search_input_text"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="Search by Title or Author"
+                android:minHeight="48dp"
+                android:textColor="#011332"
+                android:textColorHint="#00838F"
+                android:textSize="18sp" />
+
+            <!-- Search Button -->
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:text="Search"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0097A7"
+                app:cornerRadius="5dp"
+                app:textAllCaps="false" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ScrollView for the search results -->
+    <ScrollView
+        android:id="@+id/search_items_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_search_toolbar"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- RecyclerView for displaying search results -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_item_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="5dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/user_bottom_search_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/user_bottom_search_menu" />
+
+</RelativeLayout>

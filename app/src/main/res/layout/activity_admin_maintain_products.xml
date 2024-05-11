@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_product_details"
+    tools:context=".AdminMaintainProductsActivity">
+
+    <!-- TextView for displaying the title "Edit or Remove Books" -->
+    <TextView
+        android:id="@+id/text_admin_maintain_book"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Edit or Remove Books"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- ScrollView for scrolling content -->
+    <ScrollView
+        android:id="@+id/admin_maintain_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_admin_maintain_book"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- RelativeLayout for arranging UI components -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- CardView for displaying product image -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/product_image_details_card"
+                android:layout_width="300dp"
+                android:layout_height="450dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="20dp">
+
+                <!-- ImageView for displaying product image -->
+                <ImageView
+                    android:id="@+id/admin_book_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/upload_seller_book" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- TextView for indicating book details -->
+            <TextView
+                android:id="@+id/textView_book_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_image_details_card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Book Details"
+                android:textColor="#040404"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- TextView for displaying book state -->
+            <TextView
+                android:id="@+id/View_seller_BookState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_book_details"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="Book State"
+                android:textColor="#089C0F"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- TextView for displaying book ID -->
+            <TextView
+                android:id="@+id/View_seller_BookId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/View_seller_BookState"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="Book Id"
+                android:textColor="#512DA8"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- TextInputLayout for entering book name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_admin_BookName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/View_seller_BookId"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Name"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="51"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout for entering book author name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_admin_BookAuthorName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_admin_BookName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Author Name"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_book_author_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="31"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout for entering book description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_admin_BookDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_admin_BookAuthorName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Description"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_book_description_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="101"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- TextInputLayout for entering book price-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_admin_BookPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_admin_BookDescription"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:hint="Book Price"
+                android:textColorHint="#1976D2"
+                app:boxBackgroundColor="#7CEDEDE9"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="#6702DA"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="#6702DA"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FA0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_book_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Seller Details -->
+            <TextView
+                android:id="@+id/textView_seller_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_admin_BookPrice"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Seller Details"
+                android:textColor="#040404"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Seller Book Upload Date and Time -->
+            <TextView
+                android:id="@+id/seller_book_upload_time_details2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_details"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Seller book update date time"
+                android:textColor="#315DA8"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- TextView for displaying the seller's Id details -->
+            <TextView
+                android:id="@+id/seller_id_details2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_book_upload_time_details2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Seller id"
+                android:textColor="#040404"
+                android:textSize="16sp" />
+
+            <!-- TextView for displaying the seller's name details -->
+            <TextView
+                android:id="@+id/seller_name_details2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_id_details2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Seller name"
+                android:textColor="#040404"
+                android:textSize="16sp" />
+
+            <!-- TextView for displaying the seller's phone details -->
+            <TextView
+                android:id="@+id/seller_phone_details2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_name_details2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Seller phone"
+                android:textColor="#040404"
+                android:textSize="16sp" />
+
+            <!-- TextView for displaying the seller's email details -->
+            <TextView
+                android:id="@+id/seller_email_details2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_phone_details2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Seller email"
+                android:textColor="#040404"
+                android:textSize="16sp" />
+
+            <!-- TextView for displaying the seller's address details -->
+            <TextView
+                android:id="@+id/seller_address_details2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_email_details2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Seller address"
+                android:textColor="#040404"
+                android:textSize="16sp" />
+
+            <!-- Bold TextView for the 'Contact to Seller' heading -->
+            <TextView
+                android:id="@+id/textView_seller_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_address_details2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:text="Contact to Seller"
+                android:textColor="#040404"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- LinearLayout to hold contact buttons -->
+            <LinearLayout
+                android:id="@+id/seller_contact_btn_lin_lay3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_seller_contact"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Button to initiate email to the seller -->
+                <Button
+                    android:id="@+id/contact_seller_email_link_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_left_round"
+                    android:text="   Email  "
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#47B6EA"
+                    app:textAllCaps="false" />
+
+                <!-- Button to initiate a call to the seller -->
+                <Button
+                    android:id="@+id/contact_seller_call_link_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_normal"
+                    android:text="  Call "
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/grey1"
+                    app:textAllCaps="false" />
+
+                <!-- Button to initiate a whatsapp to the seller -->
+                <Button
+                    android:id="@+id/contact_seller_whatsapp_link_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_right_round"
+                    android:text="Whatsapp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#38C13E"
+                    app:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <!-- Button to apply changes -->
+            <Button
+                android:id="@+id/admin_apply_change_book_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seller_contact_btn_lin_lay3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:text="Apply Changes"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#1976D2"
+                app:cornerRadius="20dp"
+                app:textAllCaps="false" />
+
+            <!-- Button to remove book -->
+            <Button
+                android:id="@+id/admin_remove_book_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/admin_apply_change_book_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="20dp"
+                android:text="Remove Book"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#D32F2F"
+                app:cornerRadius="20dp"
+                app:textAllCaps="false" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

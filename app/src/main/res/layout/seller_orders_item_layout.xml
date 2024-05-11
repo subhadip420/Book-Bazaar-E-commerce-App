@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_item_details_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="#F8ADAD"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="20dp">
+
+    <RelativeLayout
+        android:id="@+id/order_item_details_rel_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88E7B4FA">
+
+        <!-- TextViews for displaying order details -->
+        <TextView
+            android:id="@+id/order_by_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Order by"
+            android:textColor="#111212"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- TextViews for displaying order date -->
+        <TextView
+            android:id="@+id/order_item_date_time_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_by_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Date and Time"
+            android:textColor="#111212"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- TextViews for displaying order book name -->
+        <TextView
+            android:id="@+id/order_item_name_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_date_time_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="#050505"
+            android:textSize="17sp" />
+
+        <!-- TextViews for displaying order phone-->
+        <TextView
+            android:id="@+id/order_item_phone_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_name_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Phone"
+            android:textColor="#050505"
+            android:textSize="17sp" />
+
+        <!-- TextViews for displaying order city -->
+        <TextView
+            android:id="@+id/order_item_city_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_phone_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="City"
+            android:textColor="#050505"
+            android:textSize="17sp" />
+
+        <!-- TextViews for displaying order address -->
+        <TextView
+            android:id="@+id/order_item_address_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_city_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Address"
+            android:textColor="#050505"
+            android:textSize="17sp" />
+
+        <!-- TextViews for displaying order pin -->
+        <TextView
+            android:id="@+id/order_item_pin_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_address_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Pin No"
+            android:textColor="#050505"
+            android:textSize="17sp" />
+
+        <!-- TextViews for displaying order total price -->
+        <TextView
+            android:id="@+id/order_item_totalPrice_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_pin_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="Total Price"
+            android:textColor="#FB1414"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- TextViews for displaying order state -->
+        <TextView
+            android:id="@+id/order_item_state_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_totalPrice_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="State"
+            android:textColor="#F33333"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Button to contact customer -->
+        <TextView
+            android:id="@+id/textView_contact_to_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_item_state_details"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Contact to Customer"
+            android:textColor="#111212"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Buttons to call or Whatsapp the customer -->
+        <LinearLayout
+            android:id="@+id/user_contact_btn_lin_lay4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_contact_to_customer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+            <Button
+                android:id="@+id/user_order_phone_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_left_round"
+                android:text="     Call    "
+                android:textColor="#38C13E"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFFFFF"
+                app:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/user_order_whatsapp_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_right_round"
+                android:text="Whatsapp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#38C13E"
+                app:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <!-- Button to view order items -->
+        <Button
+            android:id="@+id/order_show_all_Item_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_contact_btn_lin_lay4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="View Order Items"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#0394BF"
+            app:cornerRadius="20dp"
+            app:textAllCaps="false" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

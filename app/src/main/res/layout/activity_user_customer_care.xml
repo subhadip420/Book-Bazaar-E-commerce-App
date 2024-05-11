@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".User_Customer_Care_Activity">
+
+    <!-- Top app bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar for the top app bar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_top_customerCare_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0097A7">
+
+            <!-- Title of the top app bar -->
+            <TextView
+                android:id="@+id/textView_user_sell_on_book_bazaar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Customer Service"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Lottie animation for customer care -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/user_customer_care"
+        android:layout_width="336dp"
+        android:layout_height="235dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/care_anim" />
+
+    <!-- Welcome message -->
+    <TextView
+        android:id="@+id/textView_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_customer_care"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:text="Welcome to Book Bazaar Customer Service"
+        android:textColor="#1976D2"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Service description -->
+    <TextView
+        android:id="@+id/textView_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_welcome"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="We're here to assist you with any queries or concerns you may have regarding our platform. Whether you're a book enthusiast or a seller looking to expand your reach, we're dedicated to providing you with the best experience possible. Feel free to reach out to us via Call, Email or WhatsApp chat, available 24/7."
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <!-- Buttons for contacting customer care -->
+    <LinearLayout
+        android:id="@+id/user_contact_btn_lin_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_service"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp">
+
+        <!-- Email button -->
+        <Button
+            android:id="@+id/admin_email_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_left_round"
+            android:text="   Email  "
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#47B6EA"
+            app:textAllCaps="false" />
+
+        <!-- Call button -->
+        <Button
+            android:id="@+id/admin_call_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal"
+            android:text="  Call "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#D3D2D3"
+            app:textAllCaps="false" />
+
+        <!-- WhatsApp button -->
+        <Button
+            android:id="@+id/admin_whatsapp_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_right_round"
+            android:text="Whatsapp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#38C13E"
+            app:textAllCaps="false" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue_six"
+    tools:context=".SellerRegisterActivity">
+
+    <!-- AnimationView for sign-up -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/seller_signup_anim"
+        android:layout_width="261dp"
+        android:layout_height="219dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/seller_signup_anim" />
+
+    <!-- Text input layout for seller's name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/seller_signin_name_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_signup_anim"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Seller Name"
+        android:textColorHint="#1158E6"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#1158E6"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#1158E6"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="#1158E6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/seller_reg_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="51"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Text input layout for seller's phone number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/seller_signin_phoneno_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_signin_name_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Seller Phone"
+        android:textColorHint="#1158E6"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#1158E6"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#1158E6"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:prefixText="+91"
+        app:prefixTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="#1158E6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/seller_reg_phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Text input layout for seller's email number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/seller_signin_email_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_signin_phoneno_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Seller Email"
+        android:textColorHint="#1158E6"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#1158E6"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#1158E6"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_mail"
+        app:startIconTint="#1158E6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/seller_reg_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLength="51"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Text input layout for seller's address number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/seller_signin_address_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_signin_email_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Seller Address"
+        android:textColorHint="#1158E6"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#1158E6"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#1158E6"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="#1158E6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/seller_reg_ads_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="101"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Text input layout for seller's password number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/seller_signin_password_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_signin_address_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Password"
+        android:textColorHint="#1158E6"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#1158E6"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:counterTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#1158E6"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="#1158E6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/seller_reg_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button for Seller Registration -->
+    <Button
+        android:id="@+id/seller_register_btn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_signin_password_input1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:insetLeft="12dp"
+        android:insetRight="12dp"
+        android:text="Register Now"
+        android:textColor="#051BAE"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="20dp"
+        app:iconPadding="10dp"
+        app:textAllCaps="false"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- TextView for already having an account -->
+    <TextView
+        android:id="@+id/seller_already_acc_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_register_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:text="Already Have an Account ?"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+</RelativeLayout>

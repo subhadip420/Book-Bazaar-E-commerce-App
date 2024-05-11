@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_shipment"
+    tools:context=".UserConfirmFinalOrderActivity">
+
+    <!-- LottieAnimationView for delivery animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/seller_signup_anim"
+        android:layout_width="261dp"
+        android:layout_height="219dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/delivery_anim" />
+
+    <!-- TextView for shipment details -->
+    <TextView
+        android:id="@+id/textView_shipment_details"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#0097A7"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Please enter your Shipment Details"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- TextView for displaying total price -->
+    <TextView
+        android:id="@+id/confirm_view_total_price"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView_shipment_details"
+        android:gravity="center"
+        android:text="Total Price "
+        android:textColor="#D32F2F"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- TextInputLayout for full name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_order_name_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm_view_total_price"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Full Name"
+        android:textColorHint="#0097A7"
+        app:boxBackgroundColor="#94EDEDE9"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/shipment_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="21"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for phone number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_order_phone_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_order_name_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Contact Number"
+        android:textColorHint="#0097A7"
+        app:boxBackgroundColor="#94EDEDE9"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000"
+        app:prefixText="+91"
+        app:prefixTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/shipment_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for pin number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_order_pin_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_order_phone_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Pin Number"
+        android:textColorHint="#0097A7"
+        app:boxBackgroundColor="#94EDEDE9"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="6"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/shipment_pin_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- TextInputLayout for city -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_order_city_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_order_pin_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="City"
+        android:textColorHint="#0097A7"
+        app:boxBackgroundColor="#94EDEDE9"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/shipment_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="21"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for address -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_order_address_input1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_order_city_input1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:hint="Full Address"
+        android:textColorHint="#0097A7"
+        app:boxBackgroundColor="#94EDEDE9"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#0097A7"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:endIconTint="#0097A7"
+        app:helperText="Required*"
+        app:helperTextTextColor="#FA0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/shipment_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="101"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button for confirming the order -->
+    <Button
+        android:id="@+id/confirm_order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="Confirm Order"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#0097A7"
+        app:cornerRadius="20dp"
+        app:textAllCaps="false" />
+
+</RelativeLayout>

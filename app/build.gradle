@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'  // Android application plugin for building Android apps
+    id 'com.google.gms.google-services'  // Google services plugin for integrating Firebase services
+
+}
+
+android {
+    compileSdk 34   // SDK version used for compilation
+    defaultConfig {
+        applicationId "com.example.bookbazaar"   // Application package name
+        minSdk 26   // Minimum SDK version required
+        targetSdk 33  // Target SDK version
+        versionCode 1  // Version code
+        versionName "1.0"  // Version name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"  // Set the test instrumentation runner for unit tests
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false  // Whether to enable code shrinking and obfuscation for release builds
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // ProGuard configuration files
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8  // Set the Java source compatibility
+        targetCompatibility JavaVersion.VERSION_1_8   // Set the Java target compatibility
+    }
+    buildFeatures {          // Enable view binding
+        viewBinding true
+    }
+}
+
+dependencies {
+// AndroidX libraries
+    implementation 'androidx.appcompat:appcompat:1.6.1'  // Support library for AndroidX
+    implementation 'com.google.android.material:material:1.11.0'  // Material Design components for AndroidX
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'  // Layout manager for AndroidX
+
+
+
+
+    // Firebase libraries
+    implementation platform('com.google.firebase:firebase-bom:32.7.2')  // Firebase Bill of Materials
+    implementation 'com.google.firebase:firebase-database:8.0.2'   // Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-storage:8.0.2'  // For Firebase Storage
+    implementation 'com.google.firebase:firebase-auth:8.0.2'    // Firebase Authentication
+    implementation 'com.firebaseui:firebase-ui-database:8.0.2'  // Firebase UI for Realtime Database
+
+
+    // Image loading and manipulation libraries
+    implementation 'com.squareup.picasso:picasso:2.8'  // Image loading and caching library
+    implementation 'de.hdodenhof:circleimageview:3.1.0'  // Circular ImageView library
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'  // Image cropping library
+
+
+    // UI components and utilities
+    implementation 'com.airbnb.android:lottie:6.3.0'    //Lottie animations
+    implementation 'com.github.rey5137:material:1.3.1'  // Material Design components
+    implementation 'io.github.pilgr:paperdb:2.7.2'    // Lightweight NoSQL database
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'  // Custom number input buttons
+    implementation 'com.github.AtikulSoftware:smart-slider:1.0'  // Customizable slider component
+
+
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation  'androidx.recyclerview:recyclerview:1.3.2'
+
+
+
+    // Navigation components
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'   // LiveData support library
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'  // ViewModel support library
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'     // Navigation fragment library
+    implementation 'androidx.navigation:navigation-ui:2.3.5'            // Navigation UI library
+
+
+
+
+
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2'  // JUnit testing framework
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'  // JUnit testing extension for Android
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'  // Espresso UI testing library
+}

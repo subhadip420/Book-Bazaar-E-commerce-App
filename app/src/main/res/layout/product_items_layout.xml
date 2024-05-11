@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="305dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/availablenow_bg">
+
+        <!-- ImageView for displaying the book image -->
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="match_parent"
+            android:layout_height="245sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="0dp"
+            android:scaleType="centerCrop" />
+
+        <!-- TextView for displaying the book name -->
+        <RelativeLayout
+            android:id="@+id/book_name_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_below="@+id/book_image">
+
+            <TextView
+                android:id="@+id/book_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Book Name"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <!-- TextView for displaying the author name -->
+        <TextView
+            android:id="@+id/book_author_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/book_name_scroll_view"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:text="Author Name"
+            android:textColor="@color/purple_700"
+            android:textSize="10sp" />
+
+        <!-- TextView for displaying the book price -->
+        <TextView
+            android:id="@+id/book_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/book_author_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="0dp"
+            android:text="Book Price"
+            android:textColor="@color/start"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
