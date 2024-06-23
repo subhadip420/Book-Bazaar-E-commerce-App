@@ -5,7 +5,7 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
 
 
 ## Table Contant
- - [Features]([#Features](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/edit/master/README.md#features))
+ - [Features](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/edit/master/README.md#features)
  - [Screenshots]()
  - [Prerequirement]()
  - [Compatibility](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/edit/master/README.md#customer)
