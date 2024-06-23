@@ -13,72 +13,105 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
  - [Dependencies](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#dependencies)
  - [Contact](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#contact)
  - [Helpfull Video Tutorial](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#helpfull-video-tutorial)
+
    
 ## Features
 
-- **CUSTOMER**
-   -
-    - **Home**
-        - Login/Signin
-        - Forget Password
-        - Home
-        - Categories
-        - Search
-        - Book PDF
-    - **My Information**
-        - Wishlist
-        - Cart
-        - My Order
-        - Profile Setting
-    - **Communication**
-        - Customer Service
-        - Term & Condition
-        - Shell on Book Bazaar
-        - Share
-    - **Logout**
-  
-- **SELLER**
-   -
-    - **Dashboard**
-        - Login/Signin
-        - Edit Book Details
-        - Apply Changes
-        - Out of Stock
-        - Delete Books
-    - **Add Books**
-        - Upload Book Images
-        - Add Book Details
-        - Add Book
-    - **Profile**
-       - Seller Details
-       - Edit Details
-       - Logout
-       - Customer Care
-
-- **ADMIN**
-   -
-    - **Maintain Books**
-        - Login/Signin
-        - Edit Book Details
-        - Apply Changes
-        - Delete Books
-    - **Approve New Books**
-        - Approve Book
-        - Reject Book
-        - Contact to Seller
-    - **Check Customer Order**
-       - Contact to Customer
-       - View Order Items
-       - Shipped Customer Order
-    - **Maintain or add PDF**
-       - Edit PDF Details
-       - Add PDF
-    - **Logout**
-
-
-
-
-
+ <details>
+    <summary>CUSTOMER</summary>
+    <ul>
+        <li><strong>Home</strong>
+            <ul>
+                <li>Login/Signin</li>
+                <li>Forget Password</li>
+                <li>Home</li>
+                <li>Categories</li>
+                <li>Search</li>
+                <li>Book PDF</li>
+            </ul>
+        </li>
+        <li><strong>My Information</strong>
+            <ul>
+                <li>Wishlist</li>
+                <li>Cart</li>
+                <li>My Order</li>
+                <li>Profile Setting</li>
+            </ul>
+        </li>
+        <li><strong>Communication</strong>
+            <ul>
+                <li>Customer Service</li>
+                <li>Terms & Conditions</li>
+                <li>Sell on Book Bazaar</li>
+                <li>Share</li>
+            </ul>
+        </li>
+        <li>Logout</li>
+    </ul>
+    </details>
+    <details>
+    <summary>SELLER</summary>
+    <ul>
+        <li><strong>Dashboard</strong>
+            <ul>
+                <li>Login/Signin</li>
+                <li>Edit Book Details</li>
+                <li>Apply Changes</li>
+                <li>Out of Stock</li>
+                <li>Delete Books</li>
+            </ul>
+        </li>
+        <li><strong>Add Books</strong>
+            <ul>
+                <li>Upload Book Images</li>
+                <li>Add Book Details</li>
+                <li>Add Book</li>
+            </ul>
+        </li>
+        <li><strong>Profile</strong>
+            <ul>
+                <li>Seller Details</li>
+                <li>Edit Details</li>
+                <li>Logout</li>
+                <li>Customer Care</li>
+            </ul>
+        </li>
+    </ul>
+    </details>
+     <details>
+    <summary>ADMIN</summary>
+    <ul>
+        <li><strong>Maintain Books</strong>
+            <ul>
+                <li>Login/Signin</li>
+                <li>Edit Book Details</li>
+                <li>Apply Changes</li>
+                <li>Delete Books</li>
+            </ul>
+        </li>
+        <li><strong>Approve New Books</strong>
+            <ul>
+                <li>Approve Book</li>
+                <li>Reject Book</li>
+                <li>Contact Seller</li>
+            </ul>
+        </li>
+        <li><strong>Check Customer Order</strong>
+            <ul>
+                <li>Contact Customer</li>
+                <li>View Order Items</li>
+                <li>Shipped Customer Order</li>
+            </ul>
+        </li>
+        <li><strong>Maintain or add PDF</strong>
+            <ul>
+                <li>Edit PDF Details</li>
+                <li>Add PDF</li>
+            </ul>
+        </li>
+        <li>Logout</li>
+    </ul>
+    </details>
 
 ## Screenshots
 ![Screenshot_2024-05-13-10-48-22-52_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/98f3ce79-9320-40b7-9b7e-08fffbfecbd1)
@@ -132,7 +165,7 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
 }
 ```
 
-- **Step2:** Update Firebase Realtime Database Rule.
+- **Step3:** Update Firebase Storage Rule.
 
 ```bash
 rules_version = '2';
