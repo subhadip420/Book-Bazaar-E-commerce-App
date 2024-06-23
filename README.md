@@ -6,14 +6,14 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
 
 ## Table Contant
  - [Features](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#features)
- - [Screenshots]()
- - [Prerequirement]()
- - [Compatibility](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/edit/master/README.md#customer)
- - [Build Setup]()
- - [Dependencies]()
- - [License]()
- - [Contact]()
- - [Acknowledgements]()
+ - [Screenshots](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#screenshots)
+ - [Prerequirement](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#prerequirement)
+ - [Compatibility](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#compatibility)
+ - [Build Setup](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#build-setup)
+ - [Dependencies](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#dependencies)
+ - [Contact](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#contact)
+ - [Helpfull Video Tutorial](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/blob/master/README.md#helpfull-video-tutorial)
+   
 ## Features
 
 - **CUSTOMER**
