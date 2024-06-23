@@ -81,9 +81,31 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
 
 
 ## Screenshots
+![Screenshot_2024-05-13-10-48-22-52_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/98f3ce79-9320-40b7-9b7e-08fffbfecbd1)
 ![Screenshot_2024-05-13-10-27-44-31_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/a305008f-5e93-412c-9f58-271ed33f13ff)
+![Screenshot_2024-05-13-10-27-55-61_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/dca1a80c-5adb-41de-957b-7337c8e6e7a7)
+![Screenshot_2024-05-13-10-28-02-57_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/6a68629a-a5b1-450e-86e8-0becd2d8a4e9)
 ![Screenshot_2024-05-13-11-10-51-18_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/76af2f7c-6f8f-49e8-8d72-e5394a7aeb87)
 ![Screenshot_2024-05-13-10-22-55-15_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/4b7ad45f-79ff-484b-aa4c-6a1d1cd45711)
+![Screenshot_2024-05-13-10-46-18-58_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/f787a04d-39ab-493f-9c10-b938d4943173)
+![Screenshot_2024-05-13-10-51-10-48_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/14e74de4-3574-4635-b699-f48711003608)
+![Screenshot_2024-05-13-10-50-36-24_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/6a3905d7-0ef0-4a1d-88a6-3c35920d6b9b)
+![Screenshot_2024-05-13-10-50-45-76_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/8774bc25-0e6e-4eca-965d-802d0ced3495)
+![Screenshot_2024-05-13-10-51-20-53_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/b7e53d79-5237-43d1-841b-36863bd06fb9)
+![Screenshot_2024-05-13-10-59-20-81_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/d95c1fb4-7e63-4d1a-8659-0ffff6148181)
+![Screenshot_2024-05-13-10-46-04-76_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/3bd63ec6-331c-494c-90aa-15b9dbdae1b8)
+![Screenshot_2024-05-13-10-34-02-58_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/8b9899a4-8abc-4da9-8a58-7403d7db00e0)
+![Screenshot_2024-05-13-10-55-34-26_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/4a26209b-7088-4fa5-873b-70d02261ecef)
+![Screenshot_2024-05-13-10-55-06-35_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/cd2f9f18-176c-4a15-a96a-1c6ab1a6ec79)
+![Screenshot_2024-05-13-10-54-34-33_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/d3bae495-cca0-4d94-82ea-4c993ca9620d)
+![Screenshot_2024-05-13-10-28-13-09_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/e8855fdb-e491-4fcd-a81b-f95627e728c9)
+![Screenshot_2024-05-13-10-28-20-83_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/8ba971cf-60f3-450f-8b26-f0af8ff98ef2)
+![Screenshot_2024-05-13-10-53-12-15_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/c0ff06db-00e9-4025-a3d6-d95dbb8c195a)
+![Screenshot_2024-05-13-10-53-28-28_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/e1510227-e4b8-4458-94c5-6c1af5fb3c37)
+![Screenshot_2024-05-13-10-54-16-91_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/011661ec-8bf2-4211-9eff-fbebd0d65fc6)
+![Screenshot_2024-05-13-10-47-33-23_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/94719e5e-f76a-4311-8e66-7bf62b406aa3)
+![Screenshot_2024-05-13-10-59-46-08_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/b094f48f-b070-453d-8fe3-470feb948c3e)
+![Screenshot_2024-05-13-10-59-58-92_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/a396e1af-3d7d-40bc-bb51-de0f8ee134a5)
 
 ## Prerequirement
 
