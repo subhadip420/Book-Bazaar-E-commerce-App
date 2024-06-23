@@ -82,7 +82,7 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
 
 ## Screenshots
 
-![App Screenshot](https://www.facebook.com/photo.php?fbid=1500565094169719&set=pb.100026487273323.-2207520000&type=3)
+![Screenshot_2024-05-13-11-10-51-18_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/0702b399-158e-48e8-9039-0e1d153bbacd)
 
 
 ## Prerequirement
