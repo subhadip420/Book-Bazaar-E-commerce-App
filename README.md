@@ -5,10 +5,10 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
 
 
 ## Table Contant
- - [Features](#Features)
+ - [Features]([#Features](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/edit/master/README.md#features))
  - [Screenshots]()
  - [Prerequirement]()
- - [Compatibility]()
+ - [Compatibility](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/edit/master/README.md#customer)
  - [Build Setup]()
  - [Dependencies]()
  - [License]()
@@ -81,9 +81,9 @@ The "Book Bazaar" Android application is a platform designed to facilitate buyin
 
 
 ## Screenshots
-
-![Screenshot_2024-05-13-11-10-51-18_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/0702b399-158e-48e8-9039-0e1d153bbacd)
-
+![Screenshot_2024-05-13-10-27-44-31_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/a305008f-5e93-412c-9f58-271ed33f13ff)
+![Screenshot_2024-05-13-11-10-51-18_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/76af2f7c-6f8f-49e8-8d72-e5394a7aeb87)
+![Screenshot_2024-05-13-10-22-55-15_e8e8461893d2fb90fad0142e02c7ed17](https://github.com/subhadip420/Book-Bazaar-E-commerce-App/assets/136852368/4b7ad45f-79ff-484b-aa4c-6a1d1cd45711)
 
 ## Prerequirement
 
